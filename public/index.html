@@ -33,12 +33,12 @@
             document.getElementById('date').innerHTML = days[dayOfWeek] + " " + months[month] + " " + day + " " + year;
 
         }
-        function myFunction() {
-            var x = document.getElementById("div-menu");
-            if (x.style.display === "block") {
-                x.style.display = "none";
+        function clickToggleMenu() {
+            var divMenu = document.getElementById("div-menu");
+            if (divMenu.style.display === "block") {
+                divMenu.style.display = "none";
             } else {
-                x.style.display = "block";
+                divMenu.style.display = "block";
             }
         }
 
@@ -102,7 +102,7 @@
         }
 
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 1000px) {
             #menu-hamberger {
                 display: block;
             }
@@ -116,6 +116,9 @@
                 
                 float: none;
             }
+            #div-menu{
+                display: none;
+            }
 
         }
     </style>
@@ -127,26 +130,20 @@
             <div id="title">Namkheun Collective</div>
             <div class="menu-wrap">
                 <div id="menu-hamberger">
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <a href="javascript:void(0);" class="icon" onclick="clickToggleMenu()">
                         <i class="fa fa-bars"></i>
                     </a>
                 </div>
                 <div id="div-menu">
                     <ul class="menu ">
                         <li class="menu-item" id="menu-page"><a href="/menu">Menu</a></li>
-                        <li class="menu-item" id="shop-page"><a href="http://store.sqirlla.com">About</a></li>
-                        <li class="menu-item" id="catering-page"><a href="/catering">Nammheuk</a></li>
-                        <li class="menu-item" id="private-events"><a href="/private-events">Namelaii</a></li>
+                        <li class="menu-item" id="shop-page"><a href="/about">About</a></li>
+                        <li class="menu-item" id="catering-page"><a href="/nammheuk">Nammheuk</a></li>
+                        <li class="menu-item" id="private-events"><a href="/namelaii">Namelaii</a></li>
                         <li class="menu-item" id="contact-page"><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
-            </div>
-            <!-- <div id="menu">
-                    <a href="">About </a>
-                    <a href="">Nammheuk </a> 
-                    <a href="">Namelaii </a>
-                    <a href="">Contact </a>
-                </div> -->
+            </div>            
             <div id="archive">Archive</div>
         </div>
         <div id="container">
